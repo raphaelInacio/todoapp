@@ -1,10 +1,10 @@
 import React from 'react'
+import IconButton from '../icon-button/iconButton'
+import CardHeader from '../card-header/cardHeader'
 
 export default props => (
 			<div className="card">
-				<div className="card-header">
-                    <h4 className="card-title"><i className="icon-pencil-square-o"></i> Cadastro de Tarefas</h4>
-				</div>
+			<CardHeader icon="icon-pencil-square-o" text="Cadastro de Tarefas"/>
 				<div className="card-body">
 					<div className="card-block">
 						<form className="form">
@@ -12,13 +12,17 @@ export default props => (
 								<div className="row">
 									<div className="col-md-9">
 										<div className="form-group">
-											<input type="text" id="projectinput1" className="form-control" placeholder="insira o nome da tarefa" name="fname"/>
+											<input type="text" 
+											id="nome" 
+											className="form-control" 
+											placeholder="insira o nome da tarefa" 
+											name="nome" 
+											onChange={props.handleChange}
+											value={props.description}/>
 										</div>
 									</div>
                                     <div className="col-md-3">
-								        <button className="btn btn-primary">
-									        <i className="icon-plus-square"></i> Add
-								        </button>
+										<IconButton icon="icon-plus-square" onClick={props.handleAdd} />
                                     </div>
 								</div>
 							</div>

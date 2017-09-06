@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default props => (
-<span className=" float-xs-right">
+<span className={ props.marginClass }>
     <button className="btn btn-primary ml-5" onClick={props.onClick}>
-        <i className={props.icon}></i>
+        <i className={ props.icon }>{ props.text }</i>
     </button>
 </span>
 )
