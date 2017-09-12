@@ -17,12 +17,13 @@ export default props => (
 											className="form-control" 
 											placeholder="insira o nome da tarefa" 
 											name="nome" 
-											onChange={props.handleChange}
-											value={props.description}/>
+											onChange={ props.handleChange }
+											value={ props.description }/>
 										</div>
 									</div>
                                     <div className="col-md-3">
-										<IconButton icon="icon-plus-square" onClick={props.handleAdd} />
+										<IconButton icon="icon-plus-square" marginClass="mr-1"  onClick={ props.handleAdd } />
+										<IconButton icon="icon-search5" marginClass="mr-1"  onClick={ props.handleSearch }  />
                                     </div>
 								</div>
 							</div>
