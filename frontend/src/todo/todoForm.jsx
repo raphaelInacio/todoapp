@@ -1,8 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
 import IconButton from '../icon-button/iconButton'
 import CardHeader from '../card-header/cardHeader'
 
-export default props => (
+const TodoForm = props => (
 			<div className="card">
 			<CardHeader icon="icon-pencil-square-o" text="Cadastro de Tarefas"/>
 				<div className="card-body">
@@ -32,3 +34,6 @@ export default props => (
 				</div>
 			</div>
 )
+
+const mapStateToProps = state => ({description: state.todo.description})
+export default connect(mapStateToProps)(TodoForm)

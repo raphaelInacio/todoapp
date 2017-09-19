@@ -5,6 +5,8 @@ import ContentHeader from '../content-header/content-header'
 import TodoForm from './todoForm'
 import TodoList from './todoList'
 
+import {combineReducers, createStore} from 'redux'
+
 const URL = 'http://localhost:3003/api/todos'
 
 export default class Todo extends Component {
