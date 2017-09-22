@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import IconButton from '../icon-button/iconButton'
 import CardHeader from '../card-header/cardHeader'
+import { changeDescription } from './todoActions'
 
 const TodoForm = props => (
 			<div className="card">
@@ -19,7 +21,7 @@ const TodoForm = props => (
 											className="form-control" 
 											placeholder="insira o nome da tarefa" 
 											name="nome" 
-											onChange={ props.handleChange }
+											onChange={ props.changeDescription }
 											value={ props.description }/>
 										</div>
 									</div>
@@ -36,4 +38,5 @@ const TodoForm = props => (
 )
 
 const mapStateToProps = state => ({description: state.todo.description})
-export default connect(mapStateToProps)(TodoForm)
+const mapDispatchToProps = dispatch => bindActionCreators({changeDescription}, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps) (TodoForm)
