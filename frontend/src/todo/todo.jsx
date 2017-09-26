@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Axios from 'axios'
 
-import ContentHeader from '../content-header/content-header'
+import ContentHeader from '../components/content-header/content-header'
 import TodoForm from './todoForm'
 import TodoList from './todoList'
 

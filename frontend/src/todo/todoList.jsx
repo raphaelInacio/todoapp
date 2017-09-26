@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import CardHeader from '../card-header/cardHeader'
-import ItemTask from '../item-task/itemTask'
+import CardHeader from '../components/card-header/cardHeader'
+import ItemTask from '../components/item-task/itemTask'
 
 const TodoList  = props => {
 

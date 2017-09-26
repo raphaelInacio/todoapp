@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import IconButton from '../icon-button/iconButton'
-import CardHeader from '../card-header/cardHeader'
-import { changeDescription } from './todoActions'
+import IconButton from '../components/icon-button/iconButton'
+import CardHeader from '../components/card-header/cardHeader'
+import { changeDescription, search } from './todoActions'
 
 const TodoForm = props => (
 			<div className="card">
@@ -38,5 +38,5 @@ const TodoForm = props => (
 )
 
 const mapStateToProps = state => ({description: state.todo.description})
-const mapDispatchToProps = dispatch => bindActionCreators({changeDescription}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({changeDescription, search}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps) (TodoForm)
